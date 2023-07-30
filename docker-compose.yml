@@ -2,6 +2,12 @@ version: '3.0'
 
 services:
 
+  go-server-app:
+    build:
+      context: .
+    ports:
+      - "28080:28080"
+
   collector:
     image: otel/opentelemetry-collector:latest
     container_name: app-collector

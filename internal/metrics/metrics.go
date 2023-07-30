@@ -31,7 +31,7 @@ func GetMeter() (*sdkmetric.MeterProvider, error) {
 	ctx := context.Background()
 	exporter, err := otlpmetricgrpc.New(
 		ctx,
-		otlpmetricgrpc.WithEndpoint("localhost:5555"),
+		otlpmetricgrpc.WithEndpoint("collector:5555"),
 		otlpmetricgrpc.WithInsecure(),
 	)
 	if err != nil {
